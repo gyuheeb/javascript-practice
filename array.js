@@ -77,3 +77,11 @@ fruits.push('banana');
 console.log(fruits);
 console.log(fruits.indexOf('banana'));  //제일 첫번째에 해당하는 값을 나타냄
 console.log(fruits.lastIndexOf('banana'));  //제일 뒤에 있는 값을 나타냄 
+
+
+
+//cf. pop return
+console.log('-------');
+console.log(fruits);
+const a = fruits.pop();
+console.log(a);
