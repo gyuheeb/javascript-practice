@@ -101,39 +101,5 @@ console.log(user);
  const fruit1 ={color: 'red'};
  const fruit2 ={color: 'blue', size:'big'};
  const mixed = Object.assign({},fruit1,fruit2);
- console.log(mixed.color);
- console.log(mixed.size);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ console.log(mixed.color);    // 뒤에 입력된 값이 값을 덮어씌어 저장되기 때문..
+ console.log(mixed.size);    //big
