@@ -2,7 +2,7 @@
 //JavaScript Object Notation
 
 //1. Object to JSON
-//stringfy(obj)
+//stringify(obj)  string -> object
 let json =JSON.stringify(true);
 console.log(json);
 
@@ -35,18 +35,21 @@ json = JSON.stringify(rabbit,(key, value) => {
 console.log(json);
 
 //2. JSON to Object
-// parse(json)
+// parse(json)  object -> string
 
 console.clear();
 json = JSON.stringify(rabbit);
-console.log(json);
-
-const obj = JSON.parse(json,(key,value) => {
-    //console.log(`key: ${key} , value: ${value}`);
-    return key ===' birthDate' ? new Date(value): value;
+const obj =  JSON.parse(json, (key, value) => {
+    console.log(`key: ${key} , value: ${value}`);
+    return key === 'birthDate' ? new Date(value): value;
 });
+console.log(json);
 console.log(obj);
-rabbit.jump();
-//obj.jump();
+
 console.log(rabbit.birthDate.getDate());
-console.log(obj.birthDate);
+console.log(obj.birthDate.getDate());
+
+console.log(rabbit.birthDate); //object
+console.log(obj.birthDate);  //string
+
+console.log(json);
