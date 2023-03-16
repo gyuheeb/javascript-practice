@@ -67,9 +67,12 @@ getChicken().then(chicken=>getegg(chicken))
    getChicken().then(getegg)
             .catch(error => {
                 return 'Bread';
-            })
+            })  // ...?
             .then(getcook)
             .then(console.log)
             .catch(console.log);
+
+
+
  
  
